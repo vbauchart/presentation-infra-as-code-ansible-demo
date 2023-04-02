@@ -6,13 +6,7 @@
 
   tasks:
     - name: Ensure nginx is installed
-      ansible.builtin.package:
+      ansible.builtin.include_role:
         name: nginx
-
-    - name: Ensure nginx is configured
-      ansible.builtin.template:
-        src: default.conf.j2
-        dest: /etc/nginx/http.d/default.conf
-        mode: '640'
       vars:
         nginx_port: 8080

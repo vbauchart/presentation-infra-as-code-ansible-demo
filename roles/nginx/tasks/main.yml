@@ -1,0 +1,11 @@
+---
+
+- name: Ensure nginx is installed
+  ansible.builtin.package:
+    name: nginx
+
+- name: Ensure nginx is configured
+  ansible.builtin.template:
+    src: default.conf.j2
+    dest: /etc/nginx/http.d/default.conf
+    mode: '640'
