@@ -1,4 +1,6 @@
-FROM python
+FROM mcr.microsoft.com/devcontainers/base:alpine-3.17
 
-RUN pip install ansible ansible-lint
+RUN apk add py3-pip
+
+RUN pip install --ignore-installed ansible ansible-lint
 
