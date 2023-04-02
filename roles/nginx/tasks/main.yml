@@ -9,3 +9,4 @@
     src: default.conf.j2
     dest: /etc/nginx/http.d/default.conf
     mode: '640'
+    owner: root

@@ -25,7 +25,11 @@
 				"redhat.ansible",
 			],
 			"settings": {
-				"files.trimTrailingWhitespace": true
+				"files.trimTrailingWhitespace": true,
+				"files.associations": {
+					"*.j2": "ansible-jinja",
+					".yml": "ansible",
+				}
 			}
 		}
 	},
